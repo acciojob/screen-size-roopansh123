@@ -7,8 +7,21 @@
 </head>
 
 <body>
+	<div class="sizeInfo">
+    <h1>
+        Width : <span class="w"></span> 
+        and Height : <span class="h"></span>
+    </h1>
+</div>
 	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
+		let w = document.querySelector('.w');
+let h = document.querySelector('.h');
+
+window.addEventListener("resize", ()=>{
+	w.textContent = window.innerWidth;
+	h.textContent = window.innerHeight;
+})
 </script>
 
 </body>
