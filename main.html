@@ -15,13 +15,19 @@
 </div>
 	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
-		let w = document.querySelector('.w');
-let h = document.querySelector('.h');
+const w = document.querySelector('.w');
+const h = document.querySelector('.h');
 
-window.addEventListener("resize", ()=>{
-	w.textContent = window.innerWidth;
-	h.textContent = window.innerHeight;
-})
+function updateSize() {
+    w.textContent = window.innerWidth;
+    h.textContent = window.innerHeight;
+}
+
+// ✅ run once when page loads
+updateSize();
+
+// ✅ run on resize
+window.addEventListener("resize", updateSize);
 </script>
 
 </body>
